@@ -1,0 +1,177 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face {
+    font-family: 'android';
+    src: url(/fontes/android.otf);
+}
+
+:root {
+    --cor0: #32FA14;
+    --cor1: #14FA98;
+    --cor2: #14FA4A;
+    --cor3: #97FA1C;
+    --cor4: #14FAE6;
+    --cor5: #67FA89;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+}
+
+body{
+    background-color: var(--cor0);
+    font-family: var(--cor4);
+    margin:auto;
+}
+
+a.externo::after {/*Todo link que for da classe externo será colocado depois dele: */
+    content: '\00A0\1F517\🤖';
+}
+
+header { 
+    background-image: linear-gradient(to bottom, var(--cor2), darkgreen);
+    min-height: 150px;
+    text-align: center;
+    padding-top: 20px;
+}
+header > h1 {
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-size: 2em;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.562);
+   
+}
+header >p {
+        
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-size: 1.2em;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.562);
+    
+
+}
+
+nav{ 
+    background-color: #97FA1C;
+    padding: 10px;
+    box-shadow: 0px 7px 7px black;
+    margin-bottom: 10px;
+}
+
+nav > a {
+    
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition-duration: 0.5s;
+}
+nav> a:hover{
+    background-color: white;
+    color: blue;
+}
+main { /*Configurações Globais do "main",(parte principal do programa) */
+
+    min-width: 300px;/*largura minima do main*/
+    max-width: 1000px;/* largura maxima do main*/
+    margin: auto; /* Centraliza o main*/
+    padding: 20px; /*acolchoamento*/
+    background-color: white;/* cor de fundo do main*/
+    border-radius: 10px 0px; /*raio da borda*/
+    box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.384);
+}
+
+main h1 {/*Configurações Globais do "h1 no main"*/
+
+    color: var(--co5);/* cor do h1 do main*/
+    font-family: var(--fonte-padrao);
+}
+
+main h2 {
+    color: var(--co5);/* cor do h2 do main*/
+    font-family: var(--fonte-padrao);
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--cor1),transparent);
+    text-indent: 8px;
+
+
+}
+
+/*Configuração de todos os paragráfos dentro do main em qualquer Hierarquia*/
+main p {
+    margin: 15px 0px; /*margem do paragrafo*/
+    text-align: justify;
+    text-indent: 30px;/*Recuo no inicio do paragrafo*/ 
+    font-size: 1.1em; /* tamanho da fonte*/
+    line-height: 2em;/* distancia entre duas linhas*/
+} 
+
+main strong {
+    color: blue;
+    font-weight: bold;
+   }
+
+main a {/* Configurações de todos os links dentro do main*/
+    background-color: #33fa148a;
+    padding: 2px 6px;
+    font-weight: bold;/* peso da fonte "negrito"*/
+    text-decoration:none;
+}
+
+main a:hover{
+    text-decoration:underline;
+    color: rgb(0, 0, 0);
+}
+
+main img {
+    width: 100%;
+}
+main img.pequena{
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+
+aside {
+    background-color: #14FA98;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px black;
+    
+}
+aside > ul {
+    list-style-type: '\2714\00A0\00A0';
+    list-style-position: inside;
+    columns: 2;
+    box-shadow: 3px 3px 8px black;
+    margin-right: 10px;
+}
+aside > h3 {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0 -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+footer /*Configuração de Roda-Pé*/
+{
+    background-color: #97FA1C;
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 1px;
+}
+
+footer > a /*Configura todo link que estiver em parágrafo que estiver em um roda-pé*/  
+{
+    font-weight: bold;
+    text-decoration: none;
+}
+
+div#bola { /* Cria uma bola*/
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
